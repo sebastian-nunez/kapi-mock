@@ -38,7 +38,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-![demo video](https://i.imgur.com/Soemr4b.gif)
+<img src="demo_rec.gif" title="Video Walkthrough" width="" alt="Video Walkthrough" />
 
 <!-- Replace this with whatever GIF tool you used! -->
 
