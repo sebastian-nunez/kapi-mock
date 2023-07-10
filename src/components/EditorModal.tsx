@@ -51,8 +51,7 @@ const EditorModal: React.FC<EditorModalProps> = (props) => {
       linkedin,
     })
 
-    // close and reset the form
-    resetForm()
+    // close the form
     document.getElementById(props.modalId)?.click()
   }
 
@@ -93,11 +92,7 @@ const EditorModal: React.FC<EditorModalProps> = (props) => {
 
           {/* Modal Footer */}
           <div className="modal-action">
-            <label
-              htmlFor={props.modalId}
-              className="btn"
-              onClick={() => resetForm()}
-            >
+            <label htmlFor={props.modalId} className="btn">
               Cancel
             </label>
 
@@ -107,11 +102,7 @@ const EditorModal: React.FC<EditorModalProps> = (props) => {
           </div>
         </div>
 
-        <label
-          className="modal-backdrop"
-          htmlFor={props.modalId}
-          onClick={() => resetForm()}
-        >
+        <label className="modal-backdrop" htmlFor={props.modalId}>
           Close
         </label>
       </div>
