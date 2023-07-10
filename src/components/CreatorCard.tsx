@@ -3,9 +3,12 @@ import { Youtube, Twitter, Linkedin, Instagram } from "lucide-react"
 import EditorModal from "./EditorModal"
 import { CreatorType } from "../../types/creator"
 
-interface CreatorCardProps extends CreatorType {}
+interface CreatorCardProps extends CreatorType {
+  fetchAll: Function
+}
 
 const CreatorCard: React.FC<CreatorCardProps> = ({
+  id,
   name,
   description,
   image,
@@ -13,13 +16,14 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
   twitter,
   linkedin,
   instagram,
+  fetchAll,
 }) => {
   // TODO: used a temporary identifier, replaced with creatorId
-  const modalId: string = `creator_modal_${new Date().getTime()}`
+  const modalId: string = `creator_modal_${id}`
 
   return (
     <>
-      <div className="card card-side border shadow-md ">
+      <div className="card card-side border shadow-md">
         <figure className="ml-8 w-1/3">
           <img
             src={image}
@@ -30,7 +34,7 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
 
         <div className="card-body w-2/3">
           <header className="flex justify-between">
-            <h2 className="card-title text-2xl">{name}</h2>
+            <h2 className="card-title text-2xl overflow-x-auto">{name}</h2>
 
             {/* The button to open modal */}
             <label htmlFor={modalId} className="btn btn-sm rounded-xl">
@@ -39,6 +43,7 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
           </header>
 
           <EditorModal
+            id={id}
             modalId={modalId}
             name={name}
             description={description}
@@ -47,6 +52,7 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
             twitter={twitter}
             linkedin={linkedin}
             instagram={instagram}
+            fetchAll={fetchAll}
           />
 
           <p>{description}</p>
