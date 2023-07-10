@@ -3,8 +3,29 @@ import CreatorCard from "./CreatorCard"
 import Hero from "./Hero"
 import { UserPlus2 } from "lucide-react"
 import { mockCreators } from "../../mockcreators"
+import { Dispatch, useEffect, useState } from "react"
+import { supabase } from "../client"
+import { CreatorType } from "../../types/creator"
+import LoadingCard from "./LoadingCard"
 
 const Home: React.FC = () => {
+  const [creators, setCreators]: [any, Dispatch<any>] = useState([])
+
+  const fetchAll = async () => {
+    const { data, error } = await supabase.from("creators").select()
+
+    setCreators(data)
+    if (error) {
+      console.error(error)
+    }
+  }
+
+  useEffect(() => {
+    if (creators.length <= 0) {
+      fetchAll()
+    }
+  }, [creators])
+
   return (
     <div className="">
       <Hero />
@@ -24,15 +45,22 @@ const Home: React.FC = () => {
           </label>
         </div>
 
-        <AddCreatorModal />
+        <AddCreatorModal fetchAll={fetchAll} />
 
         <br />
 
         {/* Creator Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {mockCreators.map((creator) => (
-            <CreatorCard {...creator} />
-          ))}
+          {creators ? (
+            creators.map((creator: CreatorType) => (
+              <CreatorCard key={creator.id} {...creator} fetchAll={fetchAll} />
+            ))
+          ) : (
+            <>
+              <LoadingCard />
+              <LoadingCard />
+            </>
+          )}
         </div>
       </section>
     </div>
