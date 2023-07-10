@@ -1,7 +1,12 @@
 import { useState } from "react"
 import CreatorForm from "./CreatorForm"
+import { supabase } from "../client"
 
-const AddCreatorModal = () => {
+interface AddCreatorModalProps {
+  fetchAll: Function
+}
+
+const AddCreatorModal: React.FC<AddCreatorModalProps> = ({ fetchAll }) => {
   const modalId = "add_creator_modal"
 
   // state
@@ -23,21 +28,28 @@ const AddCreatorModal = () => {
     setLinkedin("")
   }
 
+  const insertUser = async () => {
+    const { data, error } = await supabase
+      .from("creators")
+      .insert([
+        { name, description, image, youtube, instagram, twitter, linkedin },
+      ])
+      .select()
+
+    if (error) {
+      console.error(error)
+    }
+
+    fetchAll()
+  }
+
   const handleCreate = () => {
     if (name.length <= 0) {
       alert("Please include the creators name!")
       return
     }
 
-    console.table({
-      name,
-      description,
-      image,
-      youtube,
-      instagram,
-      twitter,
-      linkedin,
-    })
+    insertUser()
 
     // close and reset the form
     resetForm()
