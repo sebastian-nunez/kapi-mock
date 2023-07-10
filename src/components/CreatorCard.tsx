@@ -1,25 +1,18 @@
 import { Youtube, Twitter, Linkedin, Instagram } from "lucide-react"
 
 import EditorModal from "./EditorModal"
+import { CreatorType } from "../../types/creator"
 
-interface CreatorCardProps {
-  name: string
-  description: string
-  imgSrc: string
-  youtubeLink: string
-  twitterLink?: string
-  linkedinLink?: string
-  instagramLink?: string
-}
+interface CreatorCardProps extends CreatorType {}
 
 const CreatorCard: React.FC<CreatorCardProps> = ({
   name,
   description,
-  imgSrc,
-  youtubeLink,
-  twitterLink,
-  linkedinLink,
-  instagramLink,
+  image,
+  youtube,
+  twitter,
+  linkedin,
+  instagram,
 }) => {
   // TODO: used a temporary identifier, replaced with creatorId
   const modalId: string = `creator_modal_${new Date().getTime()}`
@@ -29,7 +22,7 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
       <div className="card card-side border shadow-md ">
         <figure className="ml-8 w-1/3">
           <img
-            src={imgSrc}
+            src={image}
             alt="profile picture"
             className="h-4/5 object-cover object-top drop-shadow-md rounded-xl"
           />
@@ -40,26 +33,39 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
             <h2 className="card-title text-2xl">{name}</h2>
 
             {/* The button to open modal */}
-            <label htmlFor={modalId} className="btn btn-sm rounded-2xl">
+            <label htmlFor={modalId} className="btn btn-sm rounded-xl">
               Edit
             </label>
           </header>
 
+          <EditorModal
+            modalId={modalId}
+            name={name}
+            description={description}
+            image={image}
+            youtube={youtube}
+            twitter={twitter}
+            linkedin={linkedin}
+            instagram={instagram}
+          />
+
           <p>{description}</p>
 
           <div className="card-actions">
-            <a
-              href={youtubeLink}
-              className="btn btn-ghost btn-square text-red-500"
-              target="_blank"
-            >
-              <span className="sr-only">YouTube</span>
-              {<Youtube height={50} width={50} />}
-            </a>
-
-            {twitterLink && (
+            {youtube && (
               <a
-                href={twitterLink}
+                href={youtube}
+                className="btn btn-ghost btn-square text-red-500"
+                target="_blank"
+              >
+                <span className="sr-only">YouTube</span>
+                {<Youtube height={50} width={50} />}
+              </a>
+            )}
+
+            {twitter && (
+              <a
+                href={twitter}
                 className="btn btn-ghost btn-square text-sky-400 "
                 target="_blank"
               >
@@ -68,9 +74,9 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
               </a>
             )}
 
-            {linkedinLink && (
+            {linkedin && (
               <a
-                href={linkedinLink}
+                href={linkedin}
                 className="btn btn-ghost btn-square text-blue-500 "
                 target="_blank"
               >
@@ -79,9 +85,9 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
               </a>
             )}
 
-            {instagramLink && (
+            {instagram && (
               <a
-                href={instagramLink}
+                href={instagram}
                 className="btn btn-ghost btn-square text-pink-600"
                 target="_blank"
               >
@@ -92,8 +98,6 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
           </div>
         </div>
       </div>
-
-      <EditorModal modalId={modalId} creatorName={name} />
     </>
   )
 }
