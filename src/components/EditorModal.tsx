@@ -15,21 +15,10 @@ const EditorModal: React.FC<EditorModalProps> = (props) => {
   const [twitter, setTwitter] = useState(props.twitter)
   const [linkedin, setLinkedin] = useState(props.linkedin)
 
-  const resetForm = () => {
-    setName("")
-    setDescription("")
-    setImage("")
-    setYoutube("")
-    setInstagram("")
-    setTwitter("")
-    setLinkedin("")
-  }
-
   const handleDelete = () => {
     console.log("Deleting: " + name)
 
-    // close and reset the form
-    resetForm()
+    // close the form
     document.getElementById(props.modalId)?.click()
   }
 
