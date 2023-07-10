@@ -11,6 +11,7 @@ interface CreatorFormProps extends CreatorType {
 }
 
 const CreatorForm: React.FC<CreatorFormProps> = (props) => {
+  // TODO: create a form temporary state for the form so when users hits cancel, the ACTUAL state is not saved
   return (
     <form action="#" className="form-control flex gap-2 mt-3">
       <div>
