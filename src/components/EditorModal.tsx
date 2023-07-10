@@ -1,12 +1,15 @@
 import { useState } from "react"
 import CreatorForm from "./CreatorForm"
 import { CreatorType } from "../../types/creator"
+import { supabase } from "../client"
 
 interface EditorModalProps extends CreatorType {
   modalId: string
+  fetchAll: Function
 }
 
 const EditorModal: React.FC<EditorModalProps> = (props) => {
+  const id = props.id
   const [name, setName] = useState(props.name)
   const [description, setDescription] = useState(props.description)
   const [image, setImage] = useState(props.image)
@@ -15,11 +18,39 @@ const EditorModal: React.FC<EditorModalProps> = (props) => {
   const [twitter, setTwitter] = useState(props.twitter)
   const [linkedin, setLinkedin] = useState(props.linkedin)
 
-  const handleDelete = () => {
-    console.log("Deleting: " + name)
+  const handleDelete = async () => {
+    const { error } = await supabase.from("creators").delete().eq("id", id)
+
+    props.fetchAll()
+
+    if (error) {
+      console.error(error)
+    }
 
     // close the form
     document.getElementById(props.modalId)?.click()
+  }
+
+  const saveUser = async () => {
+    const { error } = await supabase
+      .from("creators")
+      .update({
+        name,
+        description,
+        image,
+        youtube,
+        instagram,
+        twitter,
+        linkedin,
+      })
+      .eq("id", id)
+      .select()
+
+    props.fetchAll()
+
+    if (error) {
+      console.error(error)
+    }
   }
 
   const handleSave = () => {
@@ -28,17 +59,7 @@ const EditorModal: React.FC<EditorModalProps> = (props) => {
       return
     }
 
-    console.log("Saving: ")
-
-    console.table({
-      name,
-      description,
-      image,
-      youtube,
-      instagram,
-      twitter,
-      linkedin,
-    })
+    saveUser()
 
     // close the form
     document.getElementById(props.modalId)?.click()
