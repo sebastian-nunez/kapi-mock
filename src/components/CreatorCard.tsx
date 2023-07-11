@@ -1,7 +1,8 @@
 import { Youtube, Twitter, Linkedin, Instagram } from "lucide-react"
-
+import { ExternalLink } from "lucide-react"
 import EditorModal from "./EditorModal"
 import { CreatorType } from "../../types/creator"
+import { Link } from "react-router-dom"
 
 interface CreatorCardProps extends CreatorType {
   fetchAll: Function
@@ -34,7 +35,16 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
 
         <div className="card-body w-2/3">
           <header className="flex justify-between">
-            <h2 className="card-title text-2xl overflow-x-auto">{name}</h2>
+            <h2 className="card-title text-2xl overflow-x-auto">
+              <Link to={`/creators/${id}`}>
+                {name}
+                {
+                  <span>
+                    <ExternalLink className="inline-block text-gray-400 ml-2 mb-1" />
+                  </span>
+                }
+              </Link>
+            </h2>
 
             {/* The button to open modal */}
             <label htmlFor={modalId} className="btn btn-sm rounded-xl">
