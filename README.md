@@ -30,6 +30,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
+- [x] Supabase integration (dynamic data fetching)
 - [x] Fully responsive
 - [x] Added a .env to hide API keys
 - [x] Created a 404 page
