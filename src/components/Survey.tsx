@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 const Survey: React.FC = () => {
   const [step, setSteps] = useState(1)
@@ -15,10 +16,10 @@ const Survey: React.FC = () => {
         <>
           <h1 className="text-3xl font-bold ">Contact Information</h1>
 
-          <div className="flex justify-end">
+          <div className="flex sm:justify-end">
             <button
               onClick={() => setSteps((prev) => prev + 1)}
-              className="btn bg-blue-500 text-white btn-wide rounded-xl hover:bg-blue-600"
+              className="btn btn-wide rounded-xl"
             >
               Next
             </button>
@@ -58,6 +59,17 @@ const Survey: React.FC = () => {
             maiores quidem odio ex rem numquam magnam doloremque, fugiat
             dolorum!
           </p>
+
+          <div className="flex justify-center">
+            <Link to="/report">
+              <button
+                onClick={() => setSteps((prev) => prev + 1)}
+                className="btn bg-blue-500 text-white btn-wide rounded-xl hover:bg-blue-600"
+              >
+                View Report
+              </button>
+            </Link>
+          </div>
         </>
       )
     }

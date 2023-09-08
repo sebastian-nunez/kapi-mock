@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
           </p>
 
           <Link to="/file">
-            <button className="btn bg-blue-500 btn-wide text-white rounded-lg hover:bg-blue-600 mt-5">
+            <button className="btn bg-blue-500 btn-wide text-white rounded-lg hover:bg-blue-600 mt-5 drop-shadow-sm">
               File Report
             </button>
           </Link>

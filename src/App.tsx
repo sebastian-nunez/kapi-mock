@@ -4,6 +4,7 @@ import NotFound from "./components/NotFound"
 import Home from "./components/Home"
 import NavBar from "./components/NavBar"
 import Survey from "./components/Survey"
+import Report from "./components/Report"
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/file" element={<Survey />} />
+          <Route path="/report" element={<Report />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
