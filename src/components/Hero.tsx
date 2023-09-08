@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
 
           <Link to="/file">
             <button className="btn bg-blue-500 btn-block sm:btn-wide text-white rounded-lg hover:bg-blue-600 mt-6 drop-shadow-sm">
-              Try it out!
+              Try it out for FREE!
             </button>
           </Link>
         </section>
