@@ -13,12 +13,12 @@ const Hero: React.FC = () => {
           </h1>
 
           <p className="py-5 text-lg text-slate-500 md:text-2xl">
-            <em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em>
+            <em>Your trusted AI-Powered service advisor.</em>
           </p>
 
           <Link to="/file">
-            <button className="btn bg-blue-500 btn-wide text-white rounded-lg hover:bg-blue-600 mt-5 drop-shadow-sm">
-              File Report
+            <button className="btn bg-blue-500 btn-block sm:btn-wide text-white rounded-lg hover:bg-blue-600 mt-6 drop-shadow-sm">
+              Try it out!
             </button>
           </Link>
         </section>
