@@ -7,7 +7,7 @@ const Home: React.FC = () => {
       <Hero />
 
       <section className="px-5 lg:px-8">
-        <h1 className="font-bold text-3xl tracking-tight md:text-4xl">
+        <h1 className="font-bold text-3xl tracking-tight md:text-4xl text-slate-800">
           Featured Insights
         </h1>
 

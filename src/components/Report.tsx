@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 const Report: React.FC = () => {
   return (
     <>
-      <h1 className="text-3xl md:text-4xl font-bold mx-6 my-6">
+      <h1 className="text-3xl md:text-4xl font-bold mx-6 my-6 text-info">
         Advisory Report
       </h1>
 
