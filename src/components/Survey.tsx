@@ -143,21 +143,22 @@ const Survey: React.FC = () => {
 
             <div className="flex flex-col">
               <label className="label cursor-pointer">
-                <input type="radio" name="radio-1" className="radio" />
+                <input type="radio" name="radio-2" className="radio" />
                 <span className="label-text">Lorem ipsum.</span>
               </label>
 
               <label className="label cursor-pointer">
-                <input type="radio" name="radio-1" className="radio" />
+                <input type="radio" name="radio-2" className="radio" />
                 <span className="label-text">Lorem, ipsum dolor.</span>
               </label>
 
               <label className="label cursor-pointer">
-                <input type="radio" name="radio-1" className="radio" />
+                <input type="radio" name="radio-2" className="radio" />
                 <span className="label-text">Lorem ipsum dolor sit amet.</span>
               </label>
+
               <label className="label cursor-pointer">
-                <input type="radio" name="radio-1" className="radio" />
+                <input type="radio" name="radio-2" className="radio" />
                 <span className="label-text">Lorem ipsum dolor amet.</span>
               </label>
             </div>
