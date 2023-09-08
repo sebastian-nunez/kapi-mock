@@ -46,7 +46,7 @@ Describe the user interface design, including wireframes or mockups if available
 
 UI: https://www.figma.com/file/DUEC6LIdGDCnMB4oW1amvS/HSI-BotB-Draft?type=design&node-id=4%3A1100&mode=design&t=uUi86m4LwnhGEM3I-1
 
-Dashboard: KAPI includes an intuitive interface review your past advisory reports to input data, and configure any report parameters. The dashboard also includes an inbox to notify you when your report is certified along with a Calender feature that allows you to schedule an appointment with a consultant either virtually or in-person.
+Dashboard: KAPI includes an intuitive interface that allows user to review their past advisory reports. Users can input data and configure any report parameters within the report. The dashboard also includes an inbox to notify you when your report has been certified by a KPMG consultant along with a calender feature that allows you to schedule an appointment with a consultant either virtually or in-person.
 
 Progress Updates: Real-time updates on the progress of the report generation.
 
