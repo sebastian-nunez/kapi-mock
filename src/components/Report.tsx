@@ -26,7 +26,7 @@ const Report: React.FC = () => {
       </div>
       <div className="flex justify-center mt-12">
         <Link to="/">
-          <button className="btn rounded-xl btn-wide bg-blue-500 text-white hover:bg-blue-600">
+          <button className="btn rounded-full btn-wide bg-blue-500 text-white hover:bg-blue-600">
             Home
           </button>
         </Link>
