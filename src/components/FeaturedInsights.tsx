@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom"
+import docImg from "../assets/doc.png"
+import dataDrivenImg from "../assets/data_driven.jpg"
+import kpmgEnterpriseImg from "../assets/kpmg_enterprise.jpg"
+import shapingTheFutureImg from "../assets/shaping_future.jpg"
 
 const FeaturedInsights: React.FC = () => {
   return (
@@ -13,7 +17,7 @@ const FeaturedInsights: React.FC = () => {
         <div className="card lg:card-side bg-base-100 shadow-xl">
           <figure className="max-h-32 sm:max-h-full lg:ml-8 lg:w-2/3">
             <img
-              src="/src/assets/doc.png"
+              src={docImg}
               alt="Album"
               className="lg:h-4/5 object-cover object-top lg:drop-shadow-md lg:rounded-xl"
             />
@@ -40,8 +44,8 @@ const FeaturedInsights: React.FC = () => {
         <div className="card lg:card-side bg-base-100 shadow-xl">
           <figure className="max-h-32 sm:max-h-full lg:ml-8 lg:w-2/3">
             <img
-              src="/src/assets/data_driven.jpg"
-              alt="Album"
+              src={dataDrivenImg}
+              alt="data driven"
               className="lg:h-4/5 object-cover object-right lg:drop-shadow-md lg:rounded-xl"
             />
           </figure>
@@ -68,7 +72,7 @@ const FeaturedInsights: React.FC = () => {
         <div className="card lg:card-side bg-base-100 shadow-xl">
           <figure className="max-h-32 sm:max-h-full lg:ml-8 lg:w-2/3">
             <img
-              src="/src/assets/kpmg_enterprise.jpg"
+              src={kpmgEnterpriseImg}
               alt="kpmg_enterprise"
               className="lg:h-4/5 lg:object-cover lg:object-right lg:drop-shadow-md lg:rounded-xl"
             />
@@ -96,8 +100,8 @@ const FeaturedInsights: React.FC = () => {
         <div className="card lg:card-side bg-base-100 shadow-xl">
           <figure className="max-h-32 sm:max-h-full lg:ml-8 lg:w-2/3">
             <img
-              src="/src/assets/shaping_future.jpg"
-              alt="Album"
+              src={shapingTheFutureImg}
+              alt="shapingTheFutureImg"
               className="lg:h-4/5 lg:object-cover lg:object-right lg:drop-shadow-md lg:rounded-xl"
             />
           </figure>

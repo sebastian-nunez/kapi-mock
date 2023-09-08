@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom"
+import auditImg from "../assets/audit.jpg"
+import taxImg from "../assets/tax.jpg"
+import advisoryImg from "../assets/advisory.jpg"
+import enterpriseImg from "../assets/enterprise.jpg"
 
 const Services: React.FC = () => {
   return (
@@ -17,7 +21,7 @@ const Services: React.FC = () => {
           >
             <figure className="max-h-40 sm:max-h-full">
               <img
-                src="/src/assets/audit.jpg"
+                src={auditImg}
                 alt="Audit and Assurance"
                 className="object-cover object-top"
               />
@@ -38,7 +42,7 @@ const Services: React.FC = () => {
           >
             <figure className="max-h-40 sm:max-h-full">
               <img
-                src="/src/assets/tax.jpg"
+                src={taxImg}
                 alt="Tax & Legal"
                 className="object-cover object-top"
               />
@@ -59,7 +63,7 @@ const Services: React.FC = () => {
           >
             <figure className="max-h-40 sm:max-h-full">
               <img
-                src="/src/assets/advisory.jpg"
+                src={advisoryImg}
                 alt="Advisory"
                 className="object-cover object-top"
               />
@@ -80,7 +84,7 @@ const Services: React.FC = () => {
           >
             <figure className="max-h-40 sm:max-h-full">
               <img
-                src="/src/assets/enterprise.jpg"
+                src={enterpriseImg}
                 alt="Private Enterprise"
                 className="object-cover object-top"
               />
