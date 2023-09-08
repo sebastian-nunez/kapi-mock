@@ -7,7 +7,7 @@ const Home: React.FC = () => {
       <Hero />
 
       <section className="px-5 lg:px-8">
-        <h1 className="font-bold text-3xl tracking-tight md:text-4xl">
+        <h1 className="font-bold text-3xl tracking-tight md:text-4xl text-slate-800">
           Featured Insights
         </h1>
 
@@ -28,7 +28,7 @@ const Home: React.FC = () => {
                 Free Advisory Report!
               </h2>
 
-              <p className="text-slate-500 md:text-xl">
+              <p className="text-slate-500 md:text-lg">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Eligendi asperiores omnis labore!
               </p>
@@ -55,7 +55,7 @@ const Home: React.FC = () => {
             <div className="card-body">
               <h2 className="card-title text-2xl md:text-3xl">Lorem, ipsum.</h2>
 
-              <p className="text-slate-500 md:text-xl">
+              <p className="text-slate-500 md:text-lg">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Eligendi asperiores omnis labore!
               </p>
@@ -80,7 +80,7 @@ const Home: React.FC = () => {
                 Lorem, ipsum dolor.
               </h2>
 
-              <p className="text-slate-500 md:text-xl">
+              <p className="text-slate-500 md:text-lg">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Soluta, vitae quidem. Veniam voluptate ipsam perferendis.
               </p>
@@ -103,7 +103,7 @@ const Home: React.FC = () => {
             <div className="card-body">
               <h2 className="card-title text-2xl md:text-3xl">Lorem, ipsum.</h2>
 
-              <p className="text-slate-500 md:text-xl">
+              <p className="text-slate-500 md:text-lg">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
                 repellat rerum, delectus sit voluptatum alias!
               </p>

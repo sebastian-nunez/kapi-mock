@@ -3,22 +3,72 @@ const Footer: React.FC = () => {
     <footer className="footer px-5 md:px-10 py-10 bg-blue-500 text-white">
       <nav>
         <header className="footer-title">Services</header>
-        <a className="link link-hover">Audit & Assurance</a>
-        <a className="link link-hover">Tax Advisory</a>
-        <a className="link link-hover">Advisory Services</a>
-        <a className="link link-hover">Financial Advisory</a>
+        <a
+          className="link link-hover"
+          href="https://kpmg.com/xx/en/home/services/audit.html"
+        >
+          Audit & Assurance
+        </a>
+        <a
+          className="link link-hover"
+          href="https://kpmg.com/xx/en/home/services/tax.html"
+        >
+          Tax Advisory
+        </a>
+        <a
+          className="link link-hover"
+          href="https://kpmg.com/xx/en/home/services/advisory.html"
+        >
+          Advisory Services
+        </a>
+        <a
+          className="link link-hover"
+          href="https://kpmg.com/xx/en/home/services/enterprise.html"
+        >
+          Private Enterprise
+        </a>
       </nav>
       <nav>
         <header className="footer-title">Company</header>
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
+        <a
+          className="link link-hover"
+          href="https://kpmg.com/xx/en/home/about/who-we-are.html"
+        >
+          About us
+        </a>
+        <a
+          className="link link-hover"
+          href="https://kpmg.com/xx/en/home/about/who-we-are.html"
+        >
+          Contact
+        </a>
+        <a
+          className="link link-hover"
+          href="https://kpmg.com/xx/en/home/misc/contact.html?form=contact"
+        >
+          Jobs
+        </a>
       </nav>
       <nav>
         <header className="footer-title">Legal</header>
-        <a className="link link-hover">Terms of use</a>
-        <a className="link link-hover">Privacy policy</a>
-        <a className="link link-hover">Cookie policy</a>
+        <a
+          className="link link-hover"
+          href="https://kpmg.com/xx/en/home/misc/legal.html"
+        >
+          Terms of use
+        </a>
+        <a
+          className="link link-hover"
+          href="https://kpmg.com/xx/en/home/misc/privacy.html"
+        >
+          Privacy policy
+        </a>
+        <a
+          className="link link-hover"
+          href="https://kpmg.com/xx/en/home/misc/accessibility.html"
+        >
+          Accessibility
+        </a>
       </nav>
       <form>
         <header className="footer-title">Newsletter</header>
