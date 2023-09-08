@@ -20,11 +20,11 @@ const FeaturedInsights: React.FC = () => {
           </figure>
 
           <div className="card-body">
-            <h2 className="card-title text-2xl">Free Advisory Report!</h2>
+            <h2 className="card-title text-2xl">FREE Advisory Report!</h2>
 
             <p className="text-slate-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              asperiores omnis labore!
+              Unlocking AI's Potential: Your Comprehensive, No-Cost Advisory
+              Report for Informed Decision-Making!
             </p>
 
             <div className="card-actions justify-center mt-3">
