@@ -3,7 +3,8 @@ import { Routes, Route } from "react-router-dom"
 import NotFound from "./components/NotFound"
 import Home from "./components/Home"
 import NavBar from "./components/NavBar"
-import CreatorDetails from "./components/CreatorDetails"
+import Survey from "./components/Survey"
+
 const App = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -12,8 +13,7 @@ const App = () => {
       <main className="flex-1 pb-24">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/creators/:creatorId" element={<CreatorDetails />} />
-          {/* <Route path="/add" element={<div>Add</div>} /> */}
+          <Route path="/file" element={<Survey />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

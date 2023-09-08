@@ -6,10 +6,10 @@ const NavBar = () => {
     <nav className="navbar bg-base-100">
       <div className="flex-1">
         <Link to="/" className="btn btn-ghost normal-case text-xl">
-          <span className="text-red-500">
+          <span className="text-blue-500">
             <Share2 />
           </span>
-          CreatorVerse
+          KPMG
         </Link>
 
         {/* <ul className="menu menu-horizontal px-1">

@@ -1,66 +1,118 @@
-import AddCreatorModal from "./AddCreatorModal"
-import CreatorCard from "./CreatorCard"
 import Hero from "./Hero"
-import { UserPlus2 } from "lucide-react"
-import { mockCreators } from "../../mockcreators"
-import { Dispatch, useEffect, useState } from "react"
-import { supabase } from "../client"
-import { CreatorType } from "../../types/creator"
-import LoadingCard from "./LoadingCard"
+import { Link } from "react-router-dom"
 
 const Home: React.FC = () => {
-  const [creators, setCreators]: [any, Dispatch<any>] = useState([])
-
-  const fetchAll = async () => {
-    const { data, error } = await supabase.from("creators").select()
-
-    setCreators(data)
-    if (error) {
-      console.error(error)
-    }
-  }
-
-  useEffect(() => {
-    if (creators.length <= 0) {
-      fetchAll()
-    }
-  }, [creators])
-
   return (
     <div className="">
       <Hero />
 
-      <section className="px-5">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <h1 className="font-bold text-5xl tracking-tight">Creator Browser</h1>
+      <section className="px-5 lg:px-8">
+        <h1 className="font-bold text-3xl tracking-tight md:text-5xl">
+          Featured Insights
+        </h1>
 
-          <label
-            htmlFor="add_creator_modal"
-            className="btn btn-outline rounded-xl shadow-sm mt-4 md:mt-0"
-          >
-            <span>
-              <UserPlus2 />
-            </span>{" "}
-            Creator
-          </label>
-        </div>
+        <hr className="mt-2 bg-slate-400" />
 
-        <AddCreatorModal fetchAll={fetchAll} />
+        <div className="grid gap-5 mt-5 md:grid-cols-2">
+          <div className="card lg:card-side bg-base-100 shadow-xl">
+            <figure className="max-h-32 sm:max-h-full lg:ml-8 lg:w-2/3">
+              <img
+                src="/src/assets/doc.png"
+                alt="Album"
+                className="lg:h-4/5 object-cover object-top lg:drop-shadow-md lg:rounded-xl"
+              />
+            </figure>
 
-        <br />
+            <div className="card-body">
+              <h2 className="card-title text-2xl md:text-3xl">
+                Free RFP Report!
+              </h2>
 
-        {/* Creator Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {creators ? (
-            creators.map((creator: CreatorType) => (
-              <CreatorCard key={creator.id} {...creator} fetchAll={fetchAll} />
-            ))
-          ) : (
-            <>
-              <LoadingCard />
-              <LoadingCard />
-            </>
-          )}
+              <p className="text-slate-500 md:text-xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eligendi asperiores omnis labore!
+              </p>
+
+              <div className="card-actions justify-center mt-3">
+                <Link to="/file" className="w-full">
+                  <button className="btn btn-block bg-blue-500 text-white rounded-full hover:bg-blue-600">
+                    Complete
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="card lg:card-side bg-base-100 shadow-xl">
+            <figure className="max-h-32 sm:max-h-full lg:ml-8 lg:w-2/3">
+              <img
+                src="/src/assets/background.png"
+                alt="Album"
+                className="lg:h-4/5 object-cover object-top lg:drop-shadow-md lg:rounded-xl"
+              />
+            </figure>
+
+            <div className="card-body">
+              <h2 className="card-title text-2xl md:text-3xl">Lorem, ipsum.</h2>
+
+              <p className="text-slate-500 md:text-xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eligendi asperiores omnis labore!
+              </p>
+
+              <div className="card-actions justify-end">
+                <button className="btn">Read more</button>
+              </div>
+            </div>
+          </div>
+
+          <div className="card lg:card-side bg-base-100 shadow-xl">
+            <figure className="max-h-32 sm:max-h-full lg:ml-8 lg:w-2/3">
+              <img
+                src="/src/assets/brain.png"
+                alt="Album"
+                className="lg:h-4/5 lg:object-cover lg:object-top lg:drop-shadow-md lg:rounded-xl"
+              />
+            </figure>
+
+            <div className="card-body">
+              <h2 className="card-title text-2xl md:text-3xl">
+                Lorem, ipsum dolor.
+              </h2>
+
+              <p className="text-slate-500 md:text-xl">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Soluta, vitae quidem. Veniam voluptate ipsam perferendis.
+              </p>
+
+              <div className="card-actions justify-end">
+                <button className="btn">Read more</button>
+              </div>
+            </div>
+          </div>
+
+          <div className="card lg:card-side bg-base-100 shadow-xl">
+            <figure className="max-h-32 sm:max-h-full lg:ml-8 lg:w-2/3">
+              <img
+                src="/src/assets/arrow.png"
+                alt="Album"
+                className="lg:h-4/5 lg:object-cover lg:object-top lg:drop-shadow-md lg:rounded-xl"
+              />
+            </figure>
+
+            <div className="card-body">
+              <h2 className="card-title text-2xl md:text-3xl">Lorem, ipsum.</h2>
+
+              <p className="text-slate-500 md:text-xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+                repellat rerum, delectus sit voluptatum alias!
+              </p>
+
+              <div className="card-actions justify-end">
+                <button className="btn">Read more</button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

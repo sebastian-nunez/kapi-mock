@@ -1,61 +1,49 @@
-# WEB103 Prework - CreatorVerse
+# KPMG - HSI Battle of the Brains (Mock) <!-- omit in toc -->
 
-Submitted by: **Sebastian Nunez**
+> Software solution aimed to reduce the complexity behind the advisory services within _KPMG_.
 
-About this web app: Allows users to find, add and edit their favorite Content Creators.
+## Table of Contents <!-- omit in toc -->
 
-Time spent: 8 hours
+- [Introduction](#introduction)
+- [Scope](#scope)
+- [Features](#features)
+- [Architecture](#architecture)
+  - [High-Level Architecture](#high-level-architecture)
+  - [Tech Stack](#tech-stack)
+- [Data Model](#data-model)
+- [User Interface](#user-interface)
+- [Conclusion](#conclusion)
 
-## Required Features
+## Introduction
 
-The following **required** functionality is completed:
+Provide a brief introduction to the software solution, including its purpose, goals, and the problem it aims to solve.
 
-<!-- 👉🏿👉🏿👉🏿 Make sure to check off completed functionality below -->
+## Scope
 
-- [x] **A logical component structure in React is used to create the frontend of the app**
-- [x] **At least five content creators are displayed on the homepage of the app**
-- [x] **Each content creator item includes their name, a link to their channel/page, and a short description of their content**
-- [x] **API calls use the async/await design pattern via Axios or fetch()**
-- [x] **Clicking on a content creator item takes the user to their details page, which includes their name, url, and description**
-- [x] **Each content creator has their own unique URL**
-- [x] **The user can edit a content creator to change their name, url, or description**
-- [x] **The user can delete a content creator**
-- [x] **The user can add a new content creator by entering a name, url, or description and then it is displayed on the homepage**
+Define the scope of the project. Specify what features and functionalities are included and excluded from the software solution.
 
-The following **optional** features are implemented:
+## Features
 
-- [x] TailwindCSS and DaisyUI is used to style HTML elements
-- [x] The content creator items are displayed in a creative format, like cards instead of a list
-- [x] An image of each content creator is shown on their content creator card
+List the functional and non-functional requirements for the software solution. Include any dependencies or third-party services.
 
-The following **additional** features are implemented:
+## Architecture
 
-- [x] Supabase integration (dynamic data fetching)
-- [x] Fully responsive
-- [x] Added a .env to hide API keys
-- [x] Created a 404 page
+### High-Level Architecture
 
-## Video Walkthrough
+Describe the high-level architecture of the software solution, including the key components and their interactions.
 
-Here's a walkthrough of implemented required features:
+### Tech Stack
 
-<img src="demo_rec_2.gif" title="Video Walkthrough" width="" alt="Video Walkthrough" />
+Provide detailed information about each component, including their purpose, technology stack, and how they fit into the overall architecture.
 
-<!-- Replace this with whatever GIF tool you used! -->
+## Data Model
 
-GIF created with Kap
+Present the data model for the software solution, including data structures, databases, and data flow.
 
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+## User Interface
 
-## License
+Describe the user interface design, including wireframes or mockups if available. Explain how users will interact with the system.
 
-Copyright 2023 Sebastian Nunez
+## Conclusion
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-> http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+Summarize the key points of the design document and emphasize the importance of the software solution.
