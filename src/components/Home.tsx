@@ -7,7 +7,7 @@ const Home: React.FC = () => {
       <Hero />
 
       <section className="px-5 lg:px-8">
-        <h1 className="font-bold text-3xl tracking-tight md:text-5xl">
+        <h1 className="font-bold text-3xl tracking-tight md:text-4xl">
           Featured Insights
         </h1>
 
@@ -25,7 +25,7 @@ const Home: React.FC = () => {
 
             <div className="card-body">
               <h2 className="card-title text-2xl md:text-3xl">
-                Free RFP Report!
+                Free Advisory Report!
               </h2>
 
               <p className="text-slate-500 md:text-xl">
