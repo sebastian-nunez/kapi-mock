@@ -12,7 +12,7 @@ const Report: React.FC = () => {
         style={{ maxWidth: "100%", overflowX: "hidden" }}
       >
         <iframe
-          src="https://docs.google.com/gview?url=https://docs.google.com/document/d/1hMw9q7l9Wbd2s3iO5CQcBcRqWSFI11UzgwWoaaXFabc/export?format=pdf&embedded=true"
+          src="/src/assets/report.pdf"
           style={{ width: "100%", height: "100%" }}
         >
           <p>
