@@ -1,7 +1,7 @@
 {
-  "name": "creator-verse",
+  "name": "kapi-mock",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
