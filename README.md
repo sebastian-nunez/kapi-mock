@@ -1,6 +1,7 @@
 # KPMG - HSI Battle of the Brains (Mock) <!-- omit in toc -->
 
 > Software solution aimed to reduce the complexity behind the advisory services within _KPMG_.
+> This was completed over the course of 24 hours.
 
 ![kapi demo](demos/kapi_gif_demo.gif)
 
@@ -16,7 +17,7 @@
   - [Medium Fidelity](#medium-fidelity)
 - [License](#license)
 
-## Problem Statement
+## Problem Statement (24hr Challenge)
 
 _KPMG_ has hired you to propose creative and strategic solutions for how they can effectively utilize Generative AI to improve customer engagement to drive innovation and efficiency.
 
