@@ -40,22 +40,27 @@ const FeaturedInsights: React.FC = () => {
         <div className="card lg:card-side bg-base-100 shadow-xl">
           <figure className="max-h-32 sm:max-h-full lg:ml-8 lg:w-2/3">
             <img
-              src="/src/assets/background.png"
+              src="/src/assets/data_driven.jpg"
               alt="Album"
-              className="lg:h-4/5 object-cover object-top lg:drop-shadow-md lg:rounded-xl"
+              className="lg:h-4/5 object-cover object-right lg:drop-shadow-md lg:rounded-xl"
             />
           </figure>
 
           <div className="card-body">
-            <h2 className="card-title text-2xl">Lorem, ipsum.</h2>
+            <h2 className="card-title text-2xl">The Data Imperative</h2>
 
             <p className="text-slate-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              asperiores omnis labore!
+              Rewrite your data strategy to help capitalize on the digital
+              investments made over the last two years.
             </p>
 
             <div className="card-actions justify-end">
-              <button className="btn">Read more</button>
+              <Link
+                to="https://kpmg.com/xx/en/home/insights/2021/10/rewrite-your-data-strategy-to-capitalize-on-digital-investments.html"
+                className="btn"
+              >
+                Read more
+              </Link>
             </div>
           </div>
         </div>
@@ -63,22 +68,27 @@ const FeaturedInsights: React.FC = () => {
         <div className="card lg:card-side bg-base-100 shadow-xl">
           <figure className="max-h-32 sm:max-h-full lg:ml-8 lg:w-2/3">
             <img
-              src="/src/assets/brain.png"
-              alt="Album"
-              className="lg:h-4/5 lg:object-cover lg:object-top lg:drop-shadow-md lg:rounded-xl"
+              src="/src/assets/kpmg_enterprise.jpg"
+              alt="kpmg_enterprise"
+              className="lg:h-4/5 lg:object-cover lg:object-right lg:drop-shadow-md lg:rounded-xl"
             />
           </figure>
 
           <div className="card-body">
-            <h2 className="card-title text-2xl">Lorem, ipsum dolor.</h2>
+            <h2 className="card-title text-2xl">KPMG Connected Enterprise</h2>
 
             <p className="text-slate-500">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta,
-              vitae quidem. Veniam voluptate ipsam perferendis.
+              KPMG's customer centric, agile approach to digital transformation,
+              tailored by sector
             </p>
 
             <div className="card-actions justify-end">
-              <button className="btn">Read more</button>
+              <Link
+                to="https://kpmg.com/xx/en/home/services/advisory/management-consulting/kpmg-connected-enterprise.html"
+                className="btn"
+              >
+                Read more
+              </Link>
             </div>
           </div>
         </div>
@@ -86,22 +96,27 @@ const FeaturedInsights: React.FC = () => {
         <div className="card lg:card-side bg-base-100 shadow-xl">
           <figure className="max-h-32 sm:max-h-full lg:ml-8 lg:w-2/3">
             <img
-              src="/src/assets/arrow.png"
+              src="/src/assets/shaping_future.jpg"
               alt="Album"
-              className="lg:h-4/5 lg:object-cover lg:object-top lg:drop-shadow-md lg:rounded-xl"
+              className="lg:h-4/5 lg:object-cover lg:object-right lg:drop-shadow-md lg:rounded-xl"
             />
           </figure>
 
           <div className="card-body">
-            <h2 className="card-title text-2xl">Lorem, ipsum.</h2>
+            <h2 className="card-title text-2xl">Shaping the Future</h2>
 
             <p className="text-slate-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-              repellat rerum, delectus sit voluptatum alias!
+              What does the future hold for your business, your industry and
+              your role?
             </p>
 
             <div className="card-actions justify-end">
-              <button className="btn">Read more</button>
+              <Link
+                to="https://kpmg.com/xx/en/home/services/advisory/management-consulting/shaping-the-future.html"
+                className="btn"
+              >
+                Read more
+              </Link>
             </div>
           </div>
         </div>
