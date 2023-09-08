@@ -14,7 +14,7 @@ const Survey: React.FC = () => {
     if (step == 1) {
       return (
         <>
-          <h1 className="text-3xl font-bold ">Contact Information</h1>
+          <h1 className="text-3xl font-bold text-info">Contact Information</h1>
 
           <div className="md:flex gap-3">
             <div className="w-full">
@@ -111,7 +111,7 @@ const Survey: React.FC = () => {
     } else if (step == 2) {
       return (
         <>
-          <h1 className="text-3xl font-bold">Survey Information</h1>
+          <h1 className="text-3xl font-bold text-info">Survey Information</h1>
 
           <div className="w-full">
             <label className="label">
@@ -184,7 +184,21 @@ const Survey: React.FC = () => {
             </div>
           </div>
 
+          <div className="mt-4">
+            <p className="mb-2">
+              Please upload a <em>combined</em> PDF file with all your
+              documents.
+            </p>
+            <input
+              type="file"
+              className="file-input file-input-bordered file-input-info w-full max-w-xs"
+            />
+          </div>
+
           <section className="mt-5 space-y-2">
+            <h2 className="text-lg font-semibold text-blue-500">
+              Terms and Conditions
+            </h2>
             <p className="italic text-sm">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio
               fugit architecto aspernatur pariatur tempora totam. Lorem ipsum
@@ -230,7 +244,7 @@ const Survey: React.FC = () => {
     } else {
       return (
         <>
-          <h1 className="text-3xl font-bold">Submission</h1>
+          <h1 className="text-3xl font-bold text-info">Submission</h1>
           <em className="text-slate-600">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
             maiores quidem odio ex rem numquam magnam doloremque, fugiat
