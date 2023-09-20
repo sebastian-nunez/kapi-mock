@@ -1,6 +1,6 @@
 # KAPI (Mock) <!-- omit in toc -->
 
-> Software solution aimed to reduce the complexity behind the advisory services within _KPMG_.
+> Software solution aimed to reduce the complexity behind the advisory services within the company.
 
 ![kapi demo](demos/kapi_gif_demo.gif)
 
