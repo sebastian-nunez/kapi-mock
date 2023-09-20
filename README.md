@@ -1,4 +1,4 @@
-# KPMG - HSI Battle of the Brains (Mock) <!-- omit in toc -->
+# KAPI (Mock) <!-- omit in toc -->
 
 > Software solution aimed to reduce the complexity behind the advisory services within _KPMG_.
 
@@ -18,7 +18,7 @@
 
 ## Problem Statement
 
-_KPMG_ has hired you to propose creative and strategic solutions for how they can effectively utilize Generative AI to improve customer engagement to drive innovation and efficiency.
+A company has hired you to propose creative and strategic solutions for how they can effectively utilize Generative AI to improve customer engagement to drive innovation and efficiency.
 
 ## Proposed Solution
 
